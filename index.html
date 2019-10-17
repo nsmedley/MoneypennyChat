@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    </head>
+
+    <body>
+
+        <h1>How to set up a live chat from an email</h1>
+
+        <div class="wrapper">
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan nisl enim, nec finibus neque fringilla ut. Vestibulum viverra dignissim dapibus. Suspendisse leo sapien, fringilla nec metus posuere, vehicula aliquam lorem. Sed nunc elit, porttitor et rutrum porta, gravida sed lacus. Etiam turpis augue, finibus sagittis rutrum ac, mattis at ligula. Morbi tincidunt ante orci, nec malesuada purus imperdiet eu. Donec pellentesque purus id pharetra tempor.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan nisl enim, nec finibus neque fringilla ut. Vestibulum viverra dignissim dapibus. Suspendisse leo sapien, fringilla nec metus posuere, vehicula aliquam lorem. Sed nunc elit, porttitor et rutrum porta, gravida sed lacus. Etiam turpis augue, finibus sagittis rutrum ac, mattis at ligula. Morbi tincidunt ante orci, nec malesuada purus imperdiet eu. Donec pellentesque purus id pharetra tempor.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan nisl enim, nec finibus neque fringilla ut. Vestibulum viverra dignissim dapibus. Suspendisse leo sapien, fringilla nec metus posuere, vehicula aliquam lorem. Sed nunc elit, porttitor et rutrum porta, gravida sed lacus. Etiam turpis augue, finibus sagittis rutrum ac, mattis at ligula. Morbi tincidunt ante orci, nec malesuada purus imperdiet eu. Donec pellentesque purus id pharetra tempor.</p>
+            </div>
+
+            <div class="code">
+<pre><code class="language-js">if ((window.location.href.indexOf("livechat=true") != -1) {
+    SnapEngage.openProactiveChat(true, true);
+}</code></pre> 
+            </div>
+
+            <a href="/?livechat=true"
+                <div class="btn">See example</div>
+            </a>
+        </div>
+
+    </body>
+
+    <script type="text/javascript">
+    (function() {
+        var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+        se.src = '//storage.googleapis.com/moneypennychat/js/640c107b-41b7-49d8-89e7-80f72856a525.js';
+        var done = false;
+        se.onload = se.onreadystatechange = function() {
+        if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
+            done = true;
+        }
+        };
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+    })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="main.js"></script> 
+</html>
