@@ -22,13 +22,35 @@
             </div>
 
             <div class="code">
-<pre><code class="language-js">if ((window.location.href.indexOf("livechat=true") != -1) {
-    SnapEngage.openProactiveChat(true, true);
-}</code></pre> 
+<pre><code class="language-js">$(window).on('load', function () {
+    if ((window.location.href.indexOf("livechat=true") != -1) {
+        Moneypenny.startLink();
+    }
+});</code></pre>
+
+<pre><code class="language-js">$(window).on('load', function () {
+    if (window.location.href.indexOf("livechat=true&proactive") != -1) {
+        Moneypenny.openProactiveChat(true, true);
+    }
+});</code></pre> 
+
+<pre><code class="language-js">$(window).on('load', function () {
+    if (window.location.href.indexOf("livechat=true&proactivecustom") != -1) {
+        Moneypenny.openProactiveChat(true, true, 'Hello, can I help you with our setup process?');
+    }
+});</code></pre> 
             </div>
 
-            <a href="/MoneypennyChat/?livechat=true"
-                <div class="btn">See example</div>
+            <a href="/MoneypennyChat/?livechat=true">
+                <div class="btn">example 1</div>
+            </a>
+
+            <a href="/MoneypennyChat/?livechat=true&proactive">
+                <div class="btn">example 2</div>
+            </a>
+
+            <a href="/MoneypennyChat/?livechat=true&proactivecustom">
+                <div class="btn">example 3</div>
             </a>
         </div>
 
