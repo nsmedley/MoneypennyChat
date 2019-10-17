@@ -195,7 +195,8 @@ $green: #7BBA54;
 
 body {
     background:#E4E4E4;
-    font-family:$lato;
+	font-family:$lato;
+	color: $darkGrey;
 }
 
 h1 {
@@ -204,4 +205,41 @@ h1 {
     font-weight: 300;
     text-align: center;
     margin-top: 40px;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+
+	.content {
+		width:35%;
+		float: left;
+		padding-right: 20px;
+		box-sizing: border-box;
+	}
+
+	.code {
+		width:65%;
+		float: left;
+	}
+
+	.btn {
+		background: $teal;
+		color:$white;
+		clear: both;
+		display: inline-block;
+		padding: 10px 30px;
+		text-transform: capitalize;
+		font-weight: 700;
+		border-radius: 3px;
+		transition: all .3s ease;
+
+		&:hover {
+			background: darken($teal, 10%);
+		}
+	}
 }
