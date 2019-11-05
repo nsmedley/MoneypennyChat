@@ -1,3 +1,21 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -197,6 +215,7 @@ body {
     background:#E4E4E4;
 	font-family:$lato;
 	color: $darkGrey;
+	padding-bottom:100px;
 }
 
 h1 {
@@ -205,6 +224,22 @@ h1 {
     font-weight: 300;
     text-align: center;
     margin-top: 40px;
+}
+
+h2 {
+	font-size: 22px;
+    font-family: $lato;
+	font-weight: 300;
+	margin-bottom: 10px;
+	color:$teal;
+}
+
+p {
+	font-size: 16px;
+	line-height: 20px;;
+    font-family: $lato;
+	font-weight: 400;
+	margin-bottom: 15px;
 }
 
 .wrapper {
@@ -242,4 +277,18 @@ h1 {
 			background: darken($teal, 10%);
 		}
 	}
+}
+
+@media only screen and (max-width: 800px) {
+
+	.wrapper .content, .wrapper .code {
+		float: none;
+		width:100%;
+		margin-bottom:20px;
+	}
+
+	h1 {
+		padding:0 20px;
+	}
+
 }

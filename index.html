@@ -12,66 +12,79 @@
 
         <h1>How to set up a live chat from an email</h1>
 
-        <div class="wrapper">
+        <div class="wrapper cf">
             <div class="content">
-                <p>Etiam accumsan nisl enim, nec finibus neque fringilla ut. Vestibulum viverra dignissim dapibus. Suspendisse leo sapien, fringilla nec metus posuere, vehicula aliquam lorem. Sed nunc elit, porttitor et rutrum porta, gravida sed lacus. Etiam turpis augue, finibus sagittis rutrum ac, mattis at ligula. Morbi tincidunt ante orci, nec malesuada purus imperdiet eu. Donec pellentesque purus id pharetra tempor.</p>
+                <h2>Pre Chat Form (If enabled)</h2>
+                <p>Place the script inside of the landing page where people will be landing from your email; for best results it is recommended that this goes as close as possible to the to the closing &lt;/body&gt; tag. The url that they enter must contain "livechat=true" for example if your landing page is xyz.com/emailCampaign you will need to amend the link to xyz.com/emailCampaign?livechat=true</p>
+                <p>This script will open your chat as if the user has clicked on your livechat button so they will see a pre-chat form if you have it enabled.</p>
             </div>
 
             <div class="code">
-<pre><code class="language-js">$(window).on('load', function () {
-    if ((window.location.href.indexOf("livechat=true") != -1) {
-        Moneypenny.startLink();
-    }
-});</code></pre>
-
+<pre>
+<code class="language-markup">&lt;script type="text/javascript"&gt; 
+    $(window).on('load', function () {
+        if ((window.location.href.indexOf("livechat=true") != -1) {
+            Moneypenny.startLink();
+        }
+    });
+&lt;/script&gt;</code>
+</pre>
             </div>
 
-            <a href="/MoneypennyChat/?livechat=true">
+            <!-- <a href="/MoneypennyChat/?livechat=true">
                 <div class="btn">example 1</div>
-            </a>
+            </a> -->
         </div>
 
-        <div class="wrapper">
+        <div class="wrapper cf">
             <div class="content">
-                <p>Etiam accumsan nisl enim, nec finibus neque fringilla ut. Vestibulum viverra dignissim dapibus. Suspendisse leo sapien, fringilla nec metus posuere, vehicula aliquam lorem. Sed nunc elit, porttitor et rutrum porta, gravida sed lacus. Etiam turpis augue, finibus sagittis rutrum ac, mattis at ligula. Morbi tincidunt ante orci, nec malesuada purus imperdiet eu. Donec pellentesque purus id pharetra tempor.</p>
+                <h2>Proactive Chat</h2>
+                <p>Place the script inside of the landing page where people will be landing from your email; for best results it is recommended that this goes as close as possible to the to the closing &lt;/body&gt; tag. The url that they enter must contain "livechat=true&proactive" for example if your landing page is xyz.com/emailCampaign you will need to amend the link to xyz.com/emailCampaign?livechat=true&proactive</p>
+                <p>This script will open the chat as a proactive chat with the proactive message and time settings you have set globally in your portal.</p>
             </div>
 
             <div class="code">
-<pre><code class="language-js">$(window).on('load', function () {
-    if (window.location.href.indexOf("livechat=true&proactive") != -1) {
-        Moneypenny.openProactiveChat(true, true);
-    }
-});</code></pre>
+<pre>
+<code class="language-markup">&lt;script type="text/javascript"&gt; 
+    $(window).on('load', function () {
+        if (window.location.href.indexOf("livechat=true&proactive") != -1) {
+            Moneypenny.openProactiveChat(true, true);
+        }
+    });
+&lt;/script&gt;</code>
+</pre>
 
             </div>
 
-            <a href="/MoneypennyChat/?livechat=true&proactive">
+            <!-- <a href="/MoneypennyChat/?livechat=true&proactive">
                 <div class="btn">example 2</div>
-            </a>
+            </a> -->
         </div>
 
-        <div class="wrapper">
+        <div class="wrapper cf">
             <div class="content">
-                <p>Etiam accumsan nisl enim, nec finibus neque fringilla ut. Vestibulum viverra dignissim dapibus. Suspendisse leo sapien, fringilla nec metus posuere, vehicula aliquam lorem. Sed nunc elit, porttitor et rutrum porta, gravida sed lacus. Etiam turpis augue, finibus sagittis rutrum ac, mattis at ligula. Morbi tincidunt ante orci, nec malesuada purus imperdiet eu. Donec pellentesque purus id pharetra tempor.</p>
+                <h2>Proactive Chat (Custom message)</h2>
+                <p>Place the script inside of the landing page where people will be landing from your email; for best results it is recommended that this goes as close as possible to the to the closing &lt;/body&gt; tag. The url that they enter must contain "livechat=true&proactivecustom" for example if your landing page is xyz.com/emailCampaign you will need to amend the link to xyz.com/emailCampaign?livechat=true&proactivecustom</p>
+                <p>This chat will open your proactive chat with a custom message that can be set in the code here you can see it is set as "Hello, can I help you with our setup process?"</p>
             </div>
 
             <div class="code">
-<pre><code class="language-js">$(window).on('load', function () {
-    if (window.location.href.indexOf("livechat=true&proactivecustom") != -1) {
+<pre>
+<code class="language-markup">&lt;script type="text/javascript"&gt;
+    $(window).on('load', function () {
+        if (window.location.href.indexOf("livechat=true&proactivecustom") != -1) {
             Moneypenny.openProactiveChat(true, true, 'Hello, can I help you with our setup process?');
-    }
-});</code></pre>
+        }
+    });
+&lt;/script&gt;</code>
+</pre>
 
             </div>
-
-            <a href="/MoneypennyChat/?livechat=true&proactivecustom">
-                <div class="btn">example 3</div>
-            </a>
         </div>
 
     </body>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     (function() {
         var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
         se.src = '//storage.googleapis.com/moneypennychat/js/640c107b-41b7-49d8-89e7-80f72856a525.js';
@@ -83,7 +96,7 @@
         };
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
     })();
-    </script>
+    </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="main.js"></script> 
